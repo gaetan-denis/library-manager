@@ -5,6 +5,11 @@
             "LibraryManager\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "LibraryManager\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Gaëtan Denis",
@@ -12,6 +17,6 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "12"
+        "phpunit/phpunit": "^12"
     }
 }
