@@ -1,0 +1,17 @@
+{
+    "name": "gjmat/library-manager",
+    "autoload": {
+        "psr-4": {
+            "LibraryManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gaëtan Denis",
+            "email": "gaetan.denis@outlook.be"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "12"
+    }
+}
