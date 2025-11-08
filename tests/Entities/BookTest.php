@@ -19,11 +19,18 @@ class BookTest extends TestCase
         $this->updatedAt = new DateTime();
     }
 
+    /**
+     * Creates a book.
+     * @return Book
+     */
     public function createBook(): Book
     {
         return new Book($this->id, $this->createdAt, $this->updatedAt, "1984", "George Orwell", 1949);
     }
-
+    /**
+     * Tests the creation of a Book.
+     * @return void
+     */
     public function testCanCreateBook(): void
     {
         $book = $this->createBook();
