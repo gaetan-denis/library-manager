@@ -37,6 +37,17 @@ $user->addBook($book);
 echo $book->getBorrower()->getName(); // Outputs: John Doe
 ```
 
+### Testing
+
+This project includes **unit tests** for the entities (`Book`, `User`, etc.) using PHPUnit.
+
+To run the tests:
+
+```bash
+composer install
+./vendor/bin/phpunit tests
+```
+
 ### Notes
 
 This project is for training purposes and demonstrates handling collections, entity relationships, and bidirectional links in pure PHP.
@@ -81,6 +92,17 @@ $library->addBook($book);
 $user->addBook($book);
 
 echo $book->getBorrower()->getName(); // Affiche : John Doe
+```
+
+### Tests
+
+Ce projet inclut des **tests unitaires** pour les entités (`Book`, `User`, etc.) avec PHPUnit.
+
+Pour lancer les tests :
+
+```bash
+composer install
+./vendor/bin/phpunit tests
 ```
 
 ### Remarques
