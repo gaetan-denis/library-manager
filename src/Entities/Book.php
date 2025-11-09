@@ -101,10 +101,10 @@ class Book extends BaseEntity
      * @param User $borrower
      * @return void
      */
-    public function setBorrower(User $borrower): void
+    public function setBorrower(?User $borrower): void
     {
         $this->borrower = $borrower;
-        if (!in_array($this, $borrower->getBorrowedBooks(), true)) {
+        if ($borrower !== null && !in_array($this, $borrower->getBorrowedBooks(), true)) {
             $borrower->addBook($this);
         }
     }
