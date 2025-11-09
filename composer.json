@@ -1,5 +1,6 @@
 {
     "name": "gjmat/library-manager",
+    "description" : "a small object-oriented PHP application designed to manage a library",
     "autoload": {
         "psr-4": {
             "LibraryManager\\": "src/"
