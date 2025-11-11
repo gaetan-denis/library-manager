@@ -4,6 +4,7 @@ namespace LibraryManager\Tests\Entities;
 
 use PHPUnit\Framework\TestCase;
 use DateTime;
+use InvalidArgumentException;
 use LibraryManager\Entities\User;
 
 class UserTest extends TestCase
@@ -24,6 +25,10 @@ class UserTest extends TestCase
         return new User($this->id, $this->createdAt, $this->updatedAt, "John Doe", "jdoe@email.com");
     }
 
+    /**
+     * Tests the creation of a user.
+     * @return void
+     */
     public function testCanCreateUser(): void
     {
         $user = $this->createUser();
@@ -31,6 +36,10 @@ class UserTest extends TestCase
         $this->assertEquals("jdoe@email.com", $user->getEmail());
     }
 
+    /**
+     * Test the setters.
+     * @return void
+     */
     public function testSetters(): void
     {
         $user = $this->createUser();
@@ -38,5 +47,29 @@ class UserTest extends TestCase
         $this->assertEquals("John Smith", $user->getName());
         $user->setEmail("jsmith@email.com");
         $this->assertEquals("jsmith@email.com", $user->getEmail());
+    }
+
+    /**
+     * Tests if the name is empty.
+     * @return void
+     */
+    public function testIfNameIsEmpty(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage("Name cannot be empty.");
+        $user = $this->createUser();
+        $user->setName("");
+    }
+
+    /**
+     * Tests if the email is invalid.
+     * @return void
+     */
+    public function testIfEmailIsInvalid(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage("Email must be valid.");
+        $user = $this->createUser();
+        $user->setEmail("jdoe.email");
     }
 }
