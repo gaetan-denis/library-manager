@@ -24,7 +24,7 @@ class UserTest extends TestCase
         return new User($this->id, $this->createdAt, $this->updatedAt, "John Doe", "jdoe@email.com");
     }
 
-    public function testCanCreateUSer(): void
+    public function testCanCreateUser(): void
     {
         $user = $this->createUser();
         $this->assertEquals("John Doe", $user->getName());
@@ -37,6 +37,6 @@ class UserTest extends TestCase
         $user->setName("John Smith");
         $this->assertEquals("John Smith", $user->getName());
         $user->setEmail("jsmith@email.com");
-        $this->assertEquals("jsmith.email.com", $user->getEmail());
+        $this->assertEquals("jsmith@email.com", $user->getEmail());
     }
 }
