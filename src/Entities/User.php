@@ -58,9 +58,14 @@ class User extends BaseEntity
      * Sets the name.
      * @param string $name
      * @return void
+     * @throws InvalidArgumentException
      */
     public function setName(string $name): void
     {
+        $name = trim($name);
+        if ($name === '') {
+            throw new InvalidArgumentException("Name cannot be empty.");
+        }
         $this->name = $name;
     }
 
@@ -68,9 +73,13 @@ class User extends BaseEntity
      * Sets the email.
      * @param string $email
      * @return void
+     * @throws InvalidArgumentException
      */
     public function setEmail(string $email): void
     {
+        if (!filter_var(strtolower(trim($email)), FILTER_VALIDATE_EMAIL)) {
+            throw new InvalidArgumentException("Email must be valid.");
+        }
         $this->email = $email;
     }
 
