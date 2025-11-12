@@ -58,6 +58,16 @@ class Library extends BaseEntity
 
     // setters
 
+    /**
+     * Sets the name.
+     * @param string $name
+     * @return void
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
     /** Sets the list of books.
      * @param Book[] $books
      * @return void
@@ -79,7 +89,7 @@ class Library extends BaseEntity
      * @return void
      * @throws InvalidArgumentException
      */
-    public function setUser(array $users): void
+    public function setUsers(array $users): void
     {
         foreach ($users as $user) {
             if (!$user instanceof User) {
