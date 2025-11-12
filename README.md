@@ -9,7 +9,7 @@
 This project is a small object-oriented PHP application designed to manage a library.  
 It is primarily intended for **POO (Object-Oriented Programming) practice** and demonstrates the management of relationships between entities such as `Library`, `Book`, and `User` without using an ORM.
 
-### Tech Stack
+###
 
 - PHP 8.3 (OOP)
 - PHPUnit 12
@@ -22,6 +22,37 @@ It is primarily intended for **POO (Object-Oriented Programming) practice** and 
 - Add books and users to a library.
 - Track which user has borrowed which book.
 - Enforce bidirectional relationships between users and books.
+
+### Class Diagram
+
+```mermaid
+    class Library {
+        - string name
+        - Book[] books
+        - User[] users
+        + addBook(Book book)
+        + addUser(User user)
+    }
+
+    class Book {
+        - string title
+        - string author
+        - int publishedYear
+        - User borrower
+        + setBorrower(User user)
+    }
+
+    class User {
+        - string name
+        - string email
+        - Book[] borrowedBooks
+        + addBook(Book book)
+    }
+
+    Library "1" --> "*" Book : contains
+    Library "1" --> "*" User : contains
+    User "0..*" --> "0..*" Book : borrows
+```
 
 ### Example Usage
 
