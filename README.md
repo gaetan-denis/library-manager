@@ -1,6 +1,6 @@
 # Library Manager / Gestionnaire de Bibliothèque
 
-![PHPUnit](https://github.com/gaetan-denis/library-manager/actions/workflows/main.yml/badge.svg)
+![PHPUnit](https://github.com/gaetan-denis/library-manager/actions/workflows/php.yml/badge.svg)
 
 ## English
 
