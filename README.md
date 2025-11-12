@@ -1,6 +1,6 @@
 # Library Manager / Gestionnaire de Bibliothèque
 
-![PHPUnit](https://github.com/gaetan-denis/library-manager/actions/workflows/php.yml/badge.svg)
+![PHPUnit](https://github.com/gaetan-denis/library-manager/actions/workflows/php.yml/badge.svg) ![PHP](https://img.shields.io/badge/PHP-8.3-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![Last Commit](https://img.shields.io/github/last-commit/gaetan-denis/library-manager)
 
 ## English
 
