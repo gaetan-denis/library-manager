@@ -1,5 +1,18 @@
-<testsuites>
-    <testsuite name="LibraryManager Test Suite">
-        <directory>tests</directory>
-    </testsuite>
-</testsuites>
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true">
+
+    <testsuites>
+        <testsuite name="LibraryManager Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory>src/entities</directory>
+        </include>
+    </coverage>
+
+</phpunit>
+
+
