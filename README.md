@@ -9,6 +9,13 @@
 This project is a small object-oriented PHP application designed to manage a library.  
 It is primarily intended for **POO (Object-Oriented Programming) practice** and demonstrates the management of relationships between entities such as `Library`, `Book`, and `User` without using an ORM.
 
+### Tech Stack
+
+- PHP 8.3 (OOP)
+- PHPUnit 12
+- Composer
+- Git & Conventional Commits
+
 ### Features
 
 - Create libraries, users, and books.
@@ -62,6 +69,16 @@ This project is for training purposes and demonstrates handling collections, ent
 
 Ce projet est une petite application PHP orientée objet conçue pour gérer une bibliothèque.
 Il est principalement destiné à l’entraînement à la POO et montre comment gérer les relations entre entités comme `Library`, `Book` et `User` sans utiliser d’ORM.
+
+### Stack Technique
+
+- PHP 8.3 (Programmation Orientée Objet)
+
+- PHPUnit 12 (Tests unitaires)
+
+- Composer (Gestionnaire de dépendances PHP)
+
+- Git & Conventional Commits (Gestion de version et conventions de commits)
 
 ### Fonctionnalités
 
