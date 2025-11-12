@@ -26,6 +26,7 @@ It is primarily intended for **POO (Object-Oriented Programming) practice** and 
 ### Class Diagram
 
 ```mermaid
+classDiagram
     class Library {
         - string name
         - Book[] books
@@ -120,6 +121,38 @@ Ajouter des livres et des utilisateurs à une bibliothèque.
 Suivre quel utilisateur a emprunté quel livre.
 
 Maintenir les relations bidirectionnelles entre utilisateurs et livres.
+
+### Diagrammes des classes
+
+```mermaid
+classDiagram
+    class Library {
+        - string name
+        - Book[] books
+        - User[] users
+        + addBook(Book book)
+        + addUser(User user)
+    }
+
+    class Book {
+        - string title
+        - string author
+        - int publishedYear
+        - User borrower
+        + setBorrower(User user)
+    }
+
+    class User {
+        - string name
+        - string email
+        - Book[] borrowedBooks
+        + addBook(Book book)
+    }
+
+    Library "1" --> "*" Book : contains
+    Library "1" --> "*" User : contains
+    User "0..*" --> "0..*" Book : borrows
+```
 
 ### Exemple d’utilisation
 
