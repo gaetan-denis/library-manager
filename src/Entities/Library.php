@@ -86,7 +86,7 @@ class Library extends BaseEntity
                 throw new InvalidArgumentException("Each value must be of type \"User\"");
             }
         }
-        $this->$users = $user;
+        $this->users = $users;
     }
 
     /**
