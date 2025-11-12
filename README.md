@@ -1,5 +1,7 @@
 # Library Manager / Gestionnaire de Bibliothèque
 
+![PHPUnit](https://github.com/gaetan-denis/library-manager/actions/workflows/main.yml/badge.svg)
+
 ## English
 
 ### Project Purpose
